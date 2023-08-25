@@ -1,13 +1,13 @@
 # uk-wind-modelling-basic
 
-The idea is to create some simple wind models for predicting wind farm generation
+The idea is to create a simple model for predicting wind farm generation.
 
 ## Wind Farm Data
 
-Lets the the wind generation ata from the Elexon API. Technically its a 1 hour forecast, but I think its good to start with.
+Lets look at the wind generation from the Elexon API. Technically its a 1 hour forecast, but I think its good to start with.
 Lets look at the data from the `WesterMost Rough` wind farm. Its located 53°49′N 0°09′E, which is in the North Sea, just off the coast of Hull.
 
-A good package to use is https://github.com/OSUKED/ElexonDataPortal - `pip install ElexonDataPortal`
+A good package to use is https://github.com/OSUKED/ElexonDataPortal 
 
 The expected wind generation can be generated from
 
@@ -25,9 +25,9 @@ df_PHYBMDATA = df_PHYBMDATA[['local_datetime','pnLevelFrom']]
 ```
 *PN means Physical notification, this is how much the wind farm is expected to generate.
 
-# NWP data
+## NWP data
 
-Lets get some NWP data from the GFS. This is a global model, so we will need to extract the data for the UK.
+Lets get some NWP (numerical weather prediction) data from the GFS. This is a global model, so we will need to extract the data for the UK.
 
 A good package to use is Herbie - https://herbie.readthedocs.io/en/stable/
 
